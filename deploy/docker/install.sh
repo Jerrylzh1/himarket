@@ -1136,7 +1136,7 @@ show_result_panel() {
     log "  HiMarket Admin:       http://localhost:${HIMARKET_ADMIN_PORT:-5174}"
     log "  HiMarket Frontend:    http://localhost:${HIMARKET_FRONTEND_PORT:-5173}"
     if [[ "${INSTALL_NACOS}" == "true" ]]; then
-        log "  Nacos Console:        http://localhost:8080"
+        log "  Nacos Console:        http://localhost:18080"
     fi
     if [[ "${INSTALL_HIGRESS}" == "true" ]]; then
         log "  Higress Console:      http://localhost:8001"

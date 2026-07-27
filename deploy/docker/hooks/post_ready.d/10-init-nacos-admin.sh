@@ -29,7 +29,7 @@ err() { echo "[ERROR] $*" >&2; }
 log "开始初始化 Nacos 管理员密码..."
 
 NACOS_HOST="localhost"
-BASE_URL="http://${NACOS_HOST}:8080"
+BASE_URL="http://${NACOS_HOST}:18080"
 INIT_URL="${BASE_URL}/v3/auth/user/admin"
 
 log "初始化 URL: ${INIT_URL}"

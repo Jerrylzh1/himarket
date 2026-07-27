@@ -9,7 +9,7 @@ services:
 
   # MySQL 数据库(Himarket + Nacos) - 内置 MySQL，始终启动
   mysql:
-    image: ${MYSQL_IMAGE:-opensource-registry.cn-hangzhou.cr.aliyuncs.com/higress-group/mysql:latest}
+    image: ${MYSQL_IMAGE:-mysql:8.4}
     pull_policy: always
     container_name: himarket-mysql
     environment:
@@ -59,7 +59,7 @@ services:
     volumes:
       - ${HIMARKET_DATA_DIR:-${HOME}/himarket-data}/standalone-logs/:/home/nacos/logs
     ports:
-      - "8080:8080"
+      - "18080:8080"
       - "8848:8848"
       - "9848:9848"
     depends_on:
@@ -83,7 +83,7 @@ services:
     pull_policy: always
     container_name: redis-stack-server
     ports:
-      - "6379:6379"
+      - "16379:6379"
     networks:
       - himarket-network
     healthcheck:
